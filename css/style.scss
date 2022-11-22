@@ -1,0 +1,311 @@
+@charset "utf-8";
+
+$color-text: #000;
+$color-main: #898989;
+$color-bg: #FDF8EB;
+$color-bg2: #E40065;
+
+
+
+/*BASE
+---------------------------------*/
+body {
+    color: $color-text;
+    line-height: (24/14);
+    letter-spacing: (50/1000)+em;
+    font-family: "Helvetica", "Helvetica Neue", "Yu Gothic", "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Meiryo", sans-serif;
+    font-size: 14px;
+    background-color: #fff;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    padding-left: 0;
+}
+
+@mixin inner ($w: 1170px) {
+    width: 88%;
+    max-width: $w;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@mixin flex($a: center, $j: space-between) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: $j;
+    align-items: $a;
+}
+
+@mixin py($y: 100px) {
+    padding-top: $y;
+    padding-bottom: $y;
+}
+
+/* BLOCK
+---------------------------------*/
+.header {
+    padding-top: 70px;
+    padding-bottom: 100px;
+
+    &__inner {
+        @include inner();
+    }
+
+    &__list {
+        @include flex();
+    }
+
+    &__item {
+        @include flex();
+    }
+
+    &__text {
+        list-style: none;
+        padding-left: 30px;
+        font-weight: bold;
+    }
+}
+
+.footer {
+    padding-top: 100px;
+    padding-bottom: 30px;
+
+    &__inner {
+        @include inner();
+    }
+
+    &__copy {
+        color: #fff;
+        font-size: 12px;
+    }
+
+    &__text {
+        text-align: right;
+        color: #898989;
+    }
+}
+
+.works {
+    @include py();
+
+    &__inner {
+        @include inner();
+    }
+
+    &__contents {
+        margin-bottom: 59px;
+    }
+
+    &__item {
+        width: 370px;
+    }
+
+    &__list {
+        @include flex();
+    }
+}
+
+.unit {
+    &__catch {
+        font-size: 12px;
+        color: $color-main;
+        margin-bottom: 20px;
+    }
+
+    &__title {
+        font-size: 38px;
+        font-weight: normal;
+        margin-bottom: 15px;
+        padding-bottom: 30px;
+        margin-bottom: 30px;
+        position: relative;
+    }
+
+    &__title::after {
+        content: '';
+        display: block;
+        position: absolute;
+        left: 0;
+        bottom: 0px;
+        width: 120px;
+        height: 2px;
+        background-color: #000;
+    }
+
+    &__text {
+        margin-bottom: 40px;
+    }
+
+    &__eng {
+        font-style: italic;
+    }
+}
+
+.card {
+    &__title {
+        margin-top: 35px;
+        margin-bottom: 15px;
+        font-size: 20px;
+        font-weight: normal;
+    }
+
+    &__catch {
+        font-size: 12px;
+        color: $color-main;
+    }
+
+    &__text {
+        margin-top: 40px;
+    }
+}
+
+.project {
+    @include py();
+    background-color: $color-bg;
+
+    &__inner {
+        @include inner();
+    }
+
+    &__contents {
+        margin-bottom: 60px;
+    }
+
+    &__list {
+        @include flex();
+    }
+
+    &__item {
+        width: 560px;
+    }
+}
+
+.block {
+    &__title {
+        font-size: 12px;
+        color: #fff;
+        padding: 5px 11px;
+        background-color: $color-bg2;
+        display: inline-block;
+        border-radius: 20px;
+        margin: 30px 0;
+    }
+
+    &__text {
+        font-size: 20px;
+    }
+
+    &__box {
+        margin-top: 40px;
+    }
+
+    &__note {
+        margin-bottom: 15px;
+    }
+}
+
+.newsletter {
+    background-color: $color-text;
+    @include py();
+    text-align: center;
+    color: #fff;
+
+    &__title {
+        font-size: 32px;
+        font-weight: normal;
+        margin-bottom: 30px;
+    }
+
+    &__box {
+        display: inline-flex;
+    }
+
+    &__text {
+        width: 300px;
+        height: 40px;
+    }
+
+    &__btn {
+        background-color: $color-bg2;
+        display: block;
+        color: #fff;
+        width: 100px;
+        border: none;
+        height: 40px
+    }
+}
+
+/*company*/
+.company {
+    &__inner {
+        @include inner();
+    }
+
+    &__list {
+        @include flex();
+        margin-bottom: 100px;
+    }
+
+    &__main {
+        width: 30.7%;
+    }
+
+    &__sub {
+        width: 59.8%;
+    }
+
+    &__item {
+        width: 370px;
+    }
+
+    &__contents {
+        margin-bottom: 60px;
+    }
+
+    &__target {
+        color: #fff;
+        padding: 150px 0px 160px 80px;
+        margin-bottom: 60px;
+    }
+
+    &__bg1 {
+        background: url(../images/bg_project01.jpg) no-repeat center center/100% 100%;
+    }
+
+    &__bg2 {
+        background: url(../images/bg_project02.jpg) no-repeat center center/100% 100%;
+    }
+
+    &__menu {
+        @include py();
+        background-color: $color-text;
+        color: #fff;
+        text-align: center;
+    }
+
+    &__trans {
+        font-size: 32px;
+        font-weight: normal;
+        margin-bottom: 30px;
+    }
+
+    &__nav {
+        @include flex();
+        justify-content: center;
+        list-style: none;
+    }
+
+    &__crumb {
+        color: #fff;
+    }
+
+    &__leftline {
+        padding-left: 20px;
+        margin-left: 20px;
+        border-left: 1px solid #fff;
+    }
+}
