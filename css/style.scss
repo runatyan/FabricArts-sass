@@ -248,6 +248,7 @@ ul {
     &__list {
         @include flex();
         margin-bottom: 100px;
+        align-items: baseline;
     }
 
     &__main {

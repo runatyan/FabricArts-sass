@@ -217,6 +217,7 @@ ul {
   justify-content: space-between;
   align-items: center;
   margin-bottom: 100px;
+  align-items: baseline;
 }
 .company__main {
   width: 30.7%;
